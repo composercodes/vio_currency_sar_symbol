@@ -1,0 +1,7 @@
+$font-family-monospace: o-add-unicode-support-font(
+    join(
+        $font-family-monospace,
+        "saudi_riyal"
+    ),
+    1
+);

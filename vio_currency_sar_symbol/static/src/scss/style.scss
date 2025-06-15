@@ -1,0 +1,36 @@
+/* Font Faces */
+@font-face {
+    font-family: 'saudi_riyal';
+    src: url('../fonts/saudi_riyal.eot?bdfc4l');
+    src: url('../fonts/saudi_riyal.eot?bdfc4l#iefix') format('embedded-opentype'),
+         url('../fonts/saudi_riyal.ttf?bdfc4l') format('truetype'),
+         url('../fonts/saudi_riyal.woff?bdfc4l') format('woff'),
+         url('../fonts/saudi_riyal.svg?bdfc4l#saudi_riyal') format('svg');
+}
+
+$o-system-fonts: o-add-unicode-support-font(
+    join(
+        $o-system-fonts,
+        "saudi_riyal"
+    ),
+    1
+);
+
+$o-font-family-sans-serif: o-add-unicode-support-font(
+    join(
+        $o-font-family-sans-serif,
+        "saudi_riyal"
+    ),
+    1
+);
+
+
+$o-headings-font-family: o-add-unicode-support-font(
+    join(
+        $o-headings-font-family,
+        "saudi_riyal"
+    ),
+    1
+);
+
+

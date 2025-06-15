@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'saudi_riyal';
+    src: url('../fonts/saudi_riyal.eot?bdfc4l');
+    src: url('../fonts/saudi_riyal.eot?bdfc4l#iefix') format('embedded-opentype'),
+         url('../fonts/saudi_riyal.ttf?bdfc4l') format('truetype'),
+         url('../fonts/saudi_riyal.woff?bdfc4l') format('woff'),
+         url('../fonts/saudi_riyal.svg?bdfc4l#saudi_riyal') format('svg');
+}
+:root {
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" , "saudi_riyal";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, "saudi_riyal";
+  --bs-body-font-family: var(--bs-font-sans-serif);
+}
