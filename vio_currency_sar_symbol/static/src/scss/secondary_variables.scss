@@ -1,27 +1,28 @@
 /* Font Faces */
-@font-face {
-    font-family: 'saudi_riyal';
-    src: url('../fonts/saudi_riyal.eot?bdfc4l');
-    src: url('../fonts/saudi_riyal.eot?bdfc4l#iefix') format('embedded-opentype'),
-         url('../fonts/saudi_riyal.ttf?bdfc4l') format('truetype'),
-         url('../fonts/saudi_riyal.woff?bdfc4l') format('woff'),
-         url('../fonts/saudi_riyal.svg?bdfc4l#saudi_riyal') format('svg');
+@if variable-exists('o-theme-font'){
+    @font-face {
+        font-family: 'saudi_riyal';
+        src: url('../fonts/saudi_riyal.eot?bdfc4l');
+        src: url('../fonts/saudi_riyal.eot?bdfc4l#iefix') format('embedded-opentype'),
+             url('../fonts/saudi_riyal.ttf?bdfc4l') format('truetype'),
+             url('../fonts/saudi_riyal.woff?bdfc4l') format('woff'),
+             url('../fonts/saudi_riyal.svg?bdfc4l#saudi_riyal') format('svg');
+    }
+    $o-theme-font: o-add-unicode-support-font(
+        join(
+            $o-theme-font,
+            "saudi_riyal"
+        ),
+        1
+    );
+    $o-theme-headings-font: o-add-unicode-support-font(
+        join(
+            $o-theme-headings-font,
+            "saudi_riyal"
+        ),
+        1
+    );
 }
-$o-theme-font: o-add-unicode-support-font(
-    join(
-        $o-theme-font,
-        "saudi_riyal"
-    ),
-    1
-);
-$o-theme-headings-font: o-add-unicode-support-font(
-    join(
-        $o-theme-headings-font,
-        "saudi_riyal"
-    ),
-    1
-);
-
 @function add-saudi-font($value) {
   @return o-add-unicode-support-font(join($value, "saudi_riyal"), 1);
 }
