@@ -1,6 +1,6 @@
 {
     "name": "Saudi Riyal New Currency Symbol",
-    "version": "18.0.1.0.0",
+    "version": "18.0.2.0.0",
     "description": "Saudi Riyal (SAR) Currency New Symbol",
     "summary": "SAR New Symbol",
     "author": "ComposerCodes",
