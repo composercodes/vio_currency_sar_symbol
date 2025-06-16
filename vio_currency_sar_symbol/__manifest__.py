@@ -1,6 +1,6 @@
 {
     "name": "Saudi Riyal New Currency Symbol",
-    "version": "16.0.1.0.0",
+    "version": "18.0.1.0.0",
     "description": "Saudi Riyal (SAR) Currency New Symbol",
     "summary": "SAR New Symbol",
     "author": "ComposerCodes",
@@ -14,6 +14,9 @@
         'web._assets_primary_variables': [
             ('after', 'web/static/src/scss/primary_variables.scss',
              'vio_currency_sar_symbol/static/src/scss/style.scss'),
+        ],
+        'web._assets_secondary_variables': [
+            'vio_currency_sar_symbol/static/src/scss/secondary_variables.scss',
         ], 'web.report_assets_pdf': [
             ('append', 'vio_currency_sar_symbol/static/src/scss/report.scss'),
         ], 'point_of_sale.assets': [

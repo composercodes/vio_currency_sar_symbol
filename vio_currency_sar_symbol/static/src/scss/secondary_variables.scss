@@ -1,0 +1,76 @@
+/* Font Faces */
+@font-face {
+    font-family: 'saudi_riyal';
+    src: url('../fonts/saudi_riyal.eot?bdfc4l');
+    src: url('../fonts/saudi_riyal.eot?bdfc4l#iefix') format('embedded-opentype'),
+         url('../fonts/saudi_riyal.ttf?bdfc4l') format('truetype'),
+         url('../fonts/saudi_riyal.woff?bdfc4l') format('woff'),
+         url('../fonts/saudi_riyal.svg?bdfc4l#saudi_riyal') format('svg');
+}
+$o-theme-font: o-add-unicode-support-font(
+    join(
+        $o-theme-font,
+        "saudi_riyal"
+    ),
+    1
+);
+$o-theme-headings-font: o-add-unicode-support-font(
+    join(
+        $o-theme-headings-font,
+        "saudi_riyal"
+    ),
+    1
+);
+
+@function add-saudi-font($value) {
+  @return o-add-unicode-support-font(join($value, "saudi_riyal"), 1);
+}
+
+// List of font variables to patch
+$saudi-font-vars:
+  o-theme-h2-font,
+  o-theme-h3-font,
+  o-theme-h4-font,
+  o-theme-h5-font,
+  o-theme-h6-font,
+  o-theme-display-1-font,
+  o-theme-display-2-font,
+  o-theme-display-3-font,
+  o-theme-display-4-font,
+  o-theme-navbar-font,
+  o-theme-buttons-font;
+
+// Loop through each and update if variable exists
+@each $var-name in $saudi-font-vars {
+  @if variable-exists($var-name) {
+    // Dynamically get and set the global variable
+    @if global-variable-exists($var-name) {
+      // Use `meta.get-variable` and `meta.set-variable` if using Dart Sass (optional)
+      // But with plain SCSS, we just write each manually
+    }
+    // This fallback uses interpolation for global setting (manual workaround):
+    @if $var-name == o-theme-h2-font {
+      $o-theme-h2-font: add-saudi-font($o-theme-h2-font) !global;
+    } @else if $var-name == o-theme-h3-font {
+      $o-theme-h3-font: add-saudi-font($o-theme-h3-font) !global;
+    } @else if $var-name == o-theme-h4-font {
+      $o-theme-h4-font: add-saudi-font($o-theme-h4-font) !global;
+    } @else if $var-name == o-theme-h5-font {
+      $o-theme-h5-font: add-saudi-font($o-theme-h5-font) !global;
+    } @else if $var-name == o-theme-h6-font {
+      $o-theme-h6-font: add-saudi-font($o-theme-h6-font) !global;
+    } @else if $var-name == o-theme-display-1-font {
+      $o-theme-display-1-font: add-saudi-font($o-theme-display-1-font) !global;
+    } @else if $var-name == o-theme-display-2-font {
+      $o-theme-display-2-font: add-saudi-font($o-theme-display-2-font) !global;
+    } @else if $var-name == o-theme-display-3-font {
+      $o-theme-display-3-font: add-saudi-font($o-theme-display-3-font) !global;
+    } @else if $var-name == o-theme-display-4-font {
+      $o-theme-display-4-font: add-saudi-font($o-theme-display-4-font) !global;
+    } @else if $var-name == o-theme-navbar-font {
+      $o-theme-navbar-font: add-saudi-font($o-theme-navbar-font) !global;
+    } @else if $var-name == o-theme-buttons-font {
+      $o-theme-buttons-font: add-saudi-font($o-theme-buttons-font) !global;
+    }
+  }
+}
